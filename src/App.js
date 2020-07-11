@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./components/header/Header";
 import "./app.scss";
+import Main from "./components/main/Main";
 
 function App() {
   return (
     <div>
       <Header />
-      <div>movie app</div>
+      <Main />
     </div>
   );
 }
