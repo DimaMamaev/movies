@@ -1,7 +1,14 @@
 import React from "react";
+import Header from "./components/header/Header";
+import "./app.scss";
 
 function App() {
-  return <div className="App">movie app</div>;
+  return (
+    <div>
+      <Header />
+      <div>movie app</div>
+    </div>
+  );
 }
 
 export default App;
