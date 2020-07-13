@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
 import "./mainContent.scss";
 import Slideshow from "../slide-show/Slideshow";
 import Paginate from "../paginate/Paginate";
@@ -32,6 +33,7 @@ const MainContent = (props) => {
     top_rated: "Top Rated",
     upcoming: "Upcoming",
   };
+
   useEffect(() => {
     if (randomMovies.length) {
       const IMAGES = [
@@ -89,6 +91,7 @@ const MainContent = (props) => {
     </div>
   );
 };
+
 MainContent.propTypes = {
   list: PropTypes.array.isRequired,
   movieType: PropTypes.string.isRequired,
@@ -104,6 +107,7 @@ const mapStateToProps = (state) => ({
   totalPages: state.movies.totalPages,
   page: state.movies.page,
 });
+
 export default connect(mapStateToProps, { getMovies, setResponsePageNumber })(
   MainContent
 );
